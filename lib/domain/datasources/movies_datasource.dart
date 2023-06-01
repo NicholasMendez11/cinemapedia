@@ -1,6 +1,10 @@
 //El objetivo del data source del domain es que sea abstracta para no crear instancias de ella
 import '../entities/movie.dart';
 
-abstract class MovieDataSource {
+abstract class MoviesDataSource {
   Future<List<Movie>> getNowPlaying({int page = 1});
+  Future<List<Movie>> getPopular({int page = 1});
+  Future<List<Movie>> getTopRated({int page = 1});
+  Future<List<Movie>> getUpcomming({int page = 1});
+  Future<Movie> getMovieById(String id);
 }
